@@ -2,13 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hangman</title>
+    <title>Hangman Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <h1>Hangman!</h1>
-       
-        <script src="hangman.js"></script>
+    <h1>Hangman!</h1>
+    <canvas id="hangmanCanvas" width="400" height="400"></canvas>
+    <div id="customPromptOverlay" class="prompt-overlay" style="display: none;">
+        <div class="prompt-box">
+            <h2 class="prompt-title">Guess a letter</h2>
+            <p class="prompt-message">Hint: It's an animal.</p>
+            <input type="text" id="promptInput" class="prompt-input" maxlength="1" placeholder="Enter a letter">
+            <div class="prompt-buttons">
+                <button id="promptOkButton" class="btn btn-confirm">OK</button>
+                <button id="promptCancelButton" class="btn btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="hangman.js"></script>
 </body>
 </html>
